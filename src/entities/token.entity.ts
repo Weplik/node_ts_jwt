@@ -1,4 +1,11 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, JoinColumn } from 'typeorm';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  ManyToOne,
+  JoinColumn,
+  CreateDateColumn,
+} from 'typeorm';
 import { UserEntity } from './user.entity';
 
 @Entity({ name: 'tokens' })
@@ -11,6 +18,9 @@ export class TokenEntity {
 
   @Column({ name: 'expired_at' })
   expiredAt: Date;
+
+  @CreateDateColumn({ name: 'created_at' })
+  createdAt: Date;
 
   @Column()
   ip: string;

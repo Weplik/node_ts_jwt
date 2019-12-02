@@ -11,3 +11,8 @@ export const JWT = {
 export const APP_PORT = 3000;
 
 export const HEADER_CLIENT_IP = 'x-forwarded-for';
+
+export const REDIS_CONNECTION = {
+  host: 'localhost',
+  port: 6379,
+};
